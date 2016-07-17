@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Video Visits Mobile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+	<link rel="stylesheet" href="css/mobile.css">
+
+	<link rel="apple-touch-icon" href="images/vv-apple-touch-icon-72@2x.png">
+
+</head>
+
+<body>
+	<div id="modal"> <!-- Modal - Proof of Concept -->
+
+			<div class="modal-window">
+			
+				<div class="alert-guest hide-me">
+					<div class="button-close"></div>
+					<h1>Check your invite email</h1>
+					<p>To join a video visit as a patient&rsquo;s guest, now that you&rsquo;ve installed the mobile app, please go to the email inviting you to the visit and click on the link called &ldquo;join the video visit here&rdquo;. That will take you to the private login area where you can join the video visit that you have been invited to.</p>
+				</div>
+
+					<div class="alert-clinician hide-me">
+						<div class="button-close"></div>
+						<h1>KP Single Sign On needed</h1>
+						<p>To join a video visit as a clinician, you must be connected to a KP network via wi-fi or VPN and sign on using your NUID.</p>
+						<button>Go to KP Single Sign On</button>
+					</div>
+					
+			</div>
+	</div><!-- modal END -->
+
+	<div class="main-window">
+		<div class="scrollup"></div>
+
+		<div class="header">
+				<div class="header-title"></div>
+		</div>
+
+				<div class="page-content mobile-landing-page">
+
+					<div>
+						<!-- <div class="pic-frame">
+							<div class="pic">
+								<img src="images/vv-patient-welcome-image.jpg">
+							</div>
+						</div> -->
+						<h1>You are almost there!</h1>
+						<p>Thanks for installing the Video Visits app. To get started, please choose one of the following options:</p>
+					</div>
+
+					<ol>
+						<li class="button-main" href="javascript:void(0)" onclick="window.location='index-patient.html'">I&rsquo;m a patient</li>
+						<li class="button-main" href="javascript:void(0)" onclick="modalGuest();">I&rsquo;m a patient&rsquo;s guest</li>
+						<li class="button-main" href="javascript:void(0)" onclick="modalClinician();">I&rsquo;m a clinician</li>
+					</ol>
+
+					
+				</div>
+
+		<footer>
+				<p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Practices</a></p>
+				<p>&copy; Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script> The Permanente Medical Group, Inc. All rights reserved.</p>
+		</footer>
+	</div>
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.2.min.js"><\/script>')</script>
+	<script src="js/global.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Video Visits Today</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<!-- <meta name="apple-itunes-app" content="app-id=477260861"> -->
+
+	<link rel="stylesheet" href="css/mobile.css">
+
+	<link rel="shortcut icon" href="ico/favicon.ico">
+	<link rel="apple-touch-icon" href="images/vv-apple-touch-icon-72@2x.png">
+</head>
+
+<body>
+		<div id="modal"> <!-- Modal - Proof of Concept -->
+			<div class="modal-window">
+				<div id="close-modal" class="button-close"></div>
+					<h1>Video Visits Sign Off</h1>
+					<div id="logout-alert">
+						<p> Would you like to sign off from Video Visits?</p>
+						<button id="logout-yes" class="button-primary" onClick="window.location='logout-confirmation.html'">Yes</button>
+						<button id="logout-no" class="button-secondary">No</button>
+					</div>
+			</div>
+		</div><!-- modal END -->
+
+	<div class="main-window provider visits">
+		<div class="scrollup"></div>
+
+		<div class="header">
+			<div class="header-title"></div>
+			<button alt="Sign off" id="btn-logout" class="btn-nav-new btn-logout" href="javascript:void(0)" onclick="modalShow();"><span class="icon-logout"></span><span class="label">Sign off</span></button>
+		</div>
+
+		<div class="refresh-page" onClick="window.location.reload()">
+		<h2>Tap here to refresh this page</h2>
+			<p>
+				<script type="text/javascript">
+					var currentTime = new Date()
+					var month = currentTime.getMonth() + 1
+					var day = currentTime.getDate()
+					var year = (currentTime.getFullYear() + '').substring(2, 4);
+					var hours = currentTime.getHours()
+					var minutes = currentTime.getMinutes()
+
+					if (minutes < 10){
+						minutes = "0" + minutes
+					}
+
+					var suffix = "am";
+					if (hours >= 12) {
+						suffix = "pm";
+						hours = hours - 12;
+					}
+					if (hours == 0) {
+						hours = 12;
+					}
+					document.write("Last updated: " + month + "/" + day + "/" + year + " at " + hours + ":" + minutes + " " + suffix)
+				</script>
+			</p>
+		</div>
+
+			<div class="page-content">
+				<h1>Your video visits today, <script type="text/javascript">document.write(new Date().getMonth()+ 1 +"/"+ new Date().getDate());</script></h1>
+				<div class="alert hideable">
+					<div class="alert-time-image"></div>
+					<p>You can launch visits <strong>only within 15 minutes before</strong> the scheduled time.</p>
+				</div>
+
+				<div class="well meeting">
+							<div class="data">
+								<h2 class="scheduled-time">9:40 am</h2>
+								<p class="patient-name">Hong, Erick</p>
+							</div>
+							<div class="data">
+									<h2>Host:</h2>
+									<p class="host-name">Lorem Ipsum, MD</p>
+							</div>
+							<div class="launch-button-handler">
+								<button class="button-launch-visit">Launch visit</button>
+							</div>
+				</div>
+				
+				<div class="well meeting">
+					<div class="data">
+							<h2 class="scheduled-time">10:00 am</h2>
+							<p class="patient-name">Damasceno, Marcello</p>
+					</div>
+					<div class="data">
+						<h2>Guest:</h2>
+						<ul>
+							<li class="patient-guest-name">Gansecki, Karyn</li>
+						</ul>
+					</div>
+					<div class="data">
+							<h2>Host:</h2>
+							<p class="host-name">Kimberly Gulz, NP</p>
+					</div>
+					<div class="launch-button-handler">
+						<button class="button-launch-visit">Launch visit</button>
+					</div>
+				</div>
+
+
+
+				<div class="well meeting">
+					<div class="data">
+							<h2 class="scheduled-time">2:30 pm</h2>
+							<p class="patient-name">Lyons, Deborah</p>
+					</div>
+					<div class="data">
+							<h2>Host:</h2>
+							<p class="host-name">Kimberly Gulz, NP</p>
+					</div>
+					<div class="data additional-clinicians">
+							<h2>Additional Clinicians:</h2>
+							<ul>
+								<li>Lorraine Canaya,NP</li>
+								<li>Dawn Belardinelli, MD</li>
+								<li>Roberto Chong, MD</li>
+							</ul>
+					</div>
+				<div class="launch-button-handler">
+						<p class="msg-out-of-range">You’ll be able to join this visit within 15 min. before the scheduled time.</p>
+				</div>
+				</div>
+
+				<div class="well meeting">
+					<div class="data">
+							<h2 class="scheduled-time">4:30 pm</h2>
+							<p class="patient-name">Roth, Teresa</p>
+					</div>
+
+					<div class="data">
+						<h2>Guest:</h2>
+						<ul>
+							<li class="patient-guest-name">Gansecki, Karyn</li>
+						</ul>
+					</div>
+						<div class="data">
+							<h2>Host:</h2>
+							<p class="host-name">Lorraine Canaya, NP</p>
+					</div>
+					<div class="data additional-clinicians">
+							<h2>Additional Clinicians:</h2>
+							<ul>
+								<li>Kimberly Gulz, NP</li>
+								<li>Dawn Belardinelli, MD</li>
+								<li>Roberto Chong, MD</li>
+							</ul>
+					</div>
+					<div class="launch-button-handler">
+						<p class="msg-out-of-range">You’ll be able to join this visit within 15&nbsp;min. before the scheduled time.</p>
+					</div>
+				</div>
+
+				<ol class="well instructions">
+				<h2>Be ready for your video visit:</h2>
+					<li><div class="img-app"></div><span>Install the Video Visits mobile app. <a class="" href="https://itunes.apple.com/us/app/vci-mobile/id477260861?mt=8#" class="">Get it now</a></span></li>
+					<li><div class="img-connection"></div><span>Make sure you have a good connection.</span></li>
+					<li><div class="img-headphones"></div><span>For best results, use headphones during the call.</span></li>
+				</ol>
+
+			</div>
+
+		<footer>
+				<p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Practices</a></p>
+				<p>&copy; Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script> The Permanente Medical Group, Inc. All rights reserved.</p>
+				<p class="full-site-button">Switch to full site</p>
+		</footer>
+	</div>
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.2.min.js"><\/script>')</script>
+	<script src="js/global.js"></script>
+
+</body>
+</html>

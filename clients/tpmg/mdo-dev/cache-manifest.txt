@@ -1,0 +1,11 @@
+CACHE MANIFEST
+# revision 1.04
+
+CACHE:
+
+http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js
+js/global.js
+
+# must be online for websockets to work
+NETWORK:
+*

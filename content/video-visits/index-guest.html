@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<title>TPMG Video Visit</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+	<link rel="stylesheet" href="css/mobile.css">
+
+	<link rel="apple-touch-icon" href="images/vv-apple-touch-icon-72@2x.png">
+
+</head>
+
+<body>
+	<div id="modal"> <!-- Modal - Proof of Concept -->
+			<div class="modal-window">
+				<div id="close-modal" class="button-close"></div>
+					<h1>Sign on to Video Visits</h1>
+
+					<div id="app-alert">
+						<p>To join a video visit from your mobile device, please install our Video Visits mobile app. </p>
+							<div class="app-lockup" onClick="window.location='https://itunes.apple.com/us/app/vci-mobile/id477260861?mt=8#'">
+								<div class="app-icon"></div>
+								<p>Video Visits app</p>
+							</div>
+						<button class="button-primary" onClick="window.location='https://itunes.apple.com/us/app/vci-mobile/id477260861?mt=8#'">Get the app</button>
+						<button class="button-secondary" id="btn-i-have-it">I have it installed!</button>
+					</div>
+					
+					<div id="login-form" class="hide-me">
+						<form>
+							<ul class="form-block guest">
+								<li><label for="last_name">Patient&rsquo;s last name</label><input type="text" name="last_name" id="last_name" tabindex="1" autocorrect = "off" pattern="[a-zA-Z]+" required>
+									<div class="failmessage hide-me">
+										<p></p>
+									</div>
+								</li>
+								<button id="login-submit" class="off" tabindex="6" onclick="window.location='patients-visits-yes.html', modalShow();">Sign on</button>
+							</ul>
+							<p class="disclaimer">Children age 11 and younger must have a parent present during video visits.</p>
+						</form>
+					</div>
+			</div>
+	</div><!-- modal END -->
+
+	<div class="main-window profile">
+		<div class="scrollup"></div>
+
+		<div class="header">
+			<div class="header-title"></div>
+			<button alt="Sign off" id="btn-logout" class="btn-nav-new btn-logout" href="javascript:void(0)" onclick="modalShow();"><span class="icon-logout"></span><span class="label">Sign off</span></button>
+		</div>
+
+				<div class="page-content">
+
+					<div class="intro">
+						<div class="pic-frame">
+							<div class="pic">
+								<img src="images/vv-patient-welcome-image.jpg">
+							</div>
+						</div>
+						<h1>Video Visits</h1>
+						<p>Meet with your doctor by video on your mobile device.</p>
+					</div>
+
+					<ol class="well instructions">
+						<h2>Be ready for your video visit:</h2>
+						<li><button class="button-get-app" onClick="window.location='https://itunes.apple.com/us/app/vci-mobile/id477260861?mt=8#'">Get App</button>Install the Video Visits app on your device.</li>
+						<li><div class="img-connection"></div>Make sure you have a good connection.</li>
+						<li>For best results, use headphones during the call.</li>
+					</ol>
+
+					<button class="button-main" href="javascript:void(0)" onclick="modalShow();">Sign on here</button>
+				</div>
+
+		<footer>
+				<p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Practices</a></p>
+				<p>&copy; Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script> The Permanente Medical Group, Inc. All rights reserved.</p>
+		</footer>
+	</div>
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.2.min.js"><\/script>')</script>
+	<script src="js/global.js"></script>
+
+</body>
+</html>

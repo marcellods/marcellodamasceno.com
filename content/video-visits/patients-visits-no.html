@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<title>There are no visits you can join now</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+	<link rel="stylesheet" href="css/mobile.css">
+
+
+</head>
+
+<body>
+
+	<div id="modal"> <!-- Modal - Proof of Concept -->
+			<div class="modal-window">
+				<div id="close-modal" class="button-close"></div>
+					<h1>Sign off from Video Visits</h1>
+					<div id="logout-alert">
+						<p> Would you like to sign off from Video Visits?</p>
+						<button id="logout-yes" class="button-primary" onClick="window.location='logout-confirmation.html'">Yes</button>
+						<button id="logout-no" class="button-secondary">No</button>
+					</div>
+					<div id="logout-confirmation" class="hide-me">
+						<p>You have been successfully logged out!</p>
+					</div>
+			</div>
+	</div><!-- modal END -->
+
+	<div id="main-window" class="main-window visits">
+		<div class="scrollup"> <!--  button that scrolls to top  --> </div>
+
+		<div class="header">
+			<div class="header-title"></div>
+			<button alt="Sign off" id="btn-logout" class="btn-nav-new btn-logout" href="javascript:void(0)" onclick="modalShow();"><span class="icon-logout"></span><span class="label">Sign off</span></button>
+		</div>
+
+		<div class="refresh-page" onClick="window.location.reload()">
+		<h2>Tap here to refresh this page</h2>
+			<p>
+				<script type="text/javascript">
+					var currentTime = new Date()
+					var month = currentTime.getMonth() + 1
+					var day = currentTime.getDate()
+					var year = (currentTime.getFullYear() + '').substring(2, 4);
+					var hours = currentTime.getHours()
+					var minutes = currentTime.getMinutes()
+
+					if (minutes < 10){
+						minutes = "0" + minutes
+					}
+
+					var suffix = "am";
+					if (hours >= 12) {
+						suffix = "pm";
+						hours = hours - 12;
+					}
+					if (hours == 0) {
+						hours = 12;
+					}
+					document.write("Last updated: " + month + "/" + day + "/" + year + " at " + hours + ":" + minutes + " " + suffix)
+				</script>
+			</p>
+		</div>
+
+				<div class="page-content"> <!-- page-content START -->
+					<div class="alert alert-hero alert-no-visits">
+
+						<div class="alert-hero-message">
+						<div class="image"></div>
+							<p><strong>You have no visits scheduled within the next 15 minutes.</strong> Please check back again later.</p>
+						</div>
+
+					</div>
+
+				<ol class="well instructions">
+				<h2>Be ready for your video visit:</h2>
+					<li><div class="img-app"></div><span>Install the Video Visits mobile app. <a class="" href="https://itunes.apple.com/us/app/vci-mobile/id477260861?mt=8#" class="">Get it now</a></span></li>
+					<li><div class="img-connection"></div><span>Make sure you have a good connection.</span></li>
+					<li><div class="img-headphones"></div><span>For best results, use headphones during the call.</span></li>
+				</ol>
+				
+				</div>
+
+
+		<footer>
+				<p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Practices</a></p>
+				<p>&copy; Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script> The Permanente Medical Group, Inc. All rights reserved.</p>
+		</footer>
+	</div>
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.2.min.js"><\/script>')</script>
+	<script src="js/global.js"></script>
+
+</body>
+</html>
